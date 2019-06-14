@@ -57,12 +57,11 @@ class App extends Component {
     return (
       <div className="App">
         <nav>
-          <h1>
-            Smurf Village
-          </h1>
+          <NavLink exact to="/">Home</NavLink>        
           <NavLink exact to="/smurf-form">Add a Smurf</NavLink>
-          <NavLink exact to="/">Home</NavLink>
+          
         </nav>
+        <div className="Container">
       <Route 
       exact
       path = "/" 
@@ -85,7 +84,7 @@ class App extends Component {
       }
       />
 
-
+      </div>
       </div>
     );
   }

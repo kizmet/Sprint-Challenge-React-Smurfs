@@ -9,6 +9,8 @@ import {
 
 import './index.css';
 import App from './App';
+import 'normalize.css';
+
 
 const AppWithRouter = withRouter(App);
 
