@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+import { Menu, Header, Container, Card } from 'semantic-ui-react';
 
 import Smurf from './Smurf';
 
 class Smurfs extends Component {
   render() {
     return (
-      <div className="Smurfs">
-        <h1>Smurf Village</h1>
-        <ul>
+        <Container text style={{fontFamily:'Roboto', margin:0}} >
+        <Header as='h1'
+        style={{
+          fontSide:'16px',
+        }}
+        >Smurf Village</Header>
+        
+        <Card.Group>
           {this.props.smurfs.map(smurf => {
             return (
               <Smurf
@@ -15,12 +21,14 @@ class Smurfs extends Component {
                 id={smurf.id}
                 age={smurf.age}
                 height={smurf.height}
+                category={smurf.category}
                 key={smurf.id}
               />
             );
           })}
-        </ul>
-      </div>
+        </Card.Group>
+        </Container>
+      
     );
   }
 }
